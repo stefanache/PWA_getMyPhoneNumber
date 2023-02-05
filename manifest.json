@@ -1,14 +1,15 @@
 // manifest.json
 {
-  "name": "Aplicatia mea PWA",
-  "short_name": "Aplicatia mea",
-  "start_url": "/",
+  "name": "Get My Phone Number Application",
+  "short_name": "Phone #No. App.",
+  "scope": "/github-page-pwa/",
+  "start_url": "/PWA_getMyPhoneNumber/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#333",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "/PWA_getMyPhoneNumber/phone.png",
       "sizes": "192x192",
       "type": "image/png"
     }
