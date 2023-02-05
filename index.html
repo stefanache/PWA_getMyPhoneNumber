@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Numarul meu de telefon</title>
+  </head>
+  <body>
+    <h1>Numarul meu de telefon</h1>
+    <p id="phoneNumber"></p>
+  </body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
 
+    // Functia care cere permisiunea utilizatorului
+    function getPhoneNumber() {
+      // Verifica daca exista permisiunea de a accesa numarul de telefon
+      if (navigator.permissions) {
+        navigator.permissions.query({ name: 'telephony' }).then(function(permissionStatus) {
+          // Daca exista permisiunea, afiseaza numarul de telefon
+          if (permissionStatus.state === 'granted') {
+            navigator.telephony.getSelfId().then(function(phoneNumber) {
+              document.querySelector('#phoneNumber').textContent = phoneNumber;
+            });
+          } else {
+            // Daca nu exista permisiunea, afiseaza un mesaj
+            document.querySelector('#phoneNumber').textContent = 'Permisiunea de a accesa numarul de telefon nu a fost acordata.';
+          }
+        });
+      } else {
+        // Daca browser-ul nu suporta permisiunile, afiseaza un mesaj
+        document.querySelector('#phoneNumber').textContent = 'Browser-ul tau nu suporta permisiunile necesare pentru a accesa numarul de telefon.';
+      }
+    }
+
+    // Incearca sa obtii permisiunea la incarcarea paginii
+    window.addEventListener('load', getPhoneNumber);
+  </script>
+</html>
