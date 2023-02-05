@@ -1,7 +1,7 @@
 // manifest.json
 {
   "name": "Get My Phone Number Application",
-  "short_name": "Phone #No. App.",
+  "short_name": "Phone No App",
   "scope": "/github-page-pwa/",
   "start_url": "/PWA_getMyPhoneNumber/",
   "display": "standalone",
