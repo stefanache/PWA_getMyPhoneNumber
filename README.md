@@ -4,6 +4,7 @@ That application can be viewed in your phone using phone's browser(like Chrome).
 If can and if you according the permission then read your telehone's number and show it as/in single page.
 
 You can preview that demo in your browser from your phose uding this link
+
 [https://htmlpreview.github.io/?https://github.com/stefanache/PWA_getMyPhoneNumber/blob/main/index.html](https://htmlpreview.github.io/?https://github.com/stefanache/PWA_getMyPhoneNumber/blob/main/index.html)
 
 This example includes the essential files for a PWA application, such as the HTML for the main page, 
