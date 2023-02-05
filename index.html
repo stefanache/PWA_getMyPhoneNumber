@@ -13,6 +13,7 @@
     <p id="phoneNumber"></p>
   </body>
   <script>
+    console.log('starting...');
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js');
@@ -21,6 +22,7 @@
 
     // The function that asks for the user's permission
     function getPhoneNumber() {
+      console.log('getPhoneNumber...');
       // Check if there is permission to access the phone number
       if (navigator.permissions) {
         navigator.permissions.query({ name: 'telephony' }).then(function(permissionStatus) {
