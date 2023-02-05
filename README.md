@@ -8,6 +8,11 @@ You can preview that demo in your phone's browser from your phone using the foll
 
 [https://htmlpreview.github.io/?https://github.com/stefanache/PWA_getMyPhoneNumber/blob/main/index.html](https://htmlpreview.github.io/?https://github.com/stefanache/PWA_getMyPhoneNumber/blob/main/index.html)
 
+Currently, you can use in your phone's browser this link:
+
+[https://stefanache.github.io/PWA_getMyPhoneNumber/index.html](https://stefanache.github.io/PWA_getMyPhoneNumber/index.html)
+
+
 This example includes the essential files for a PWA application, such as the HTML for the main page, 
 a JavaScript file for registering a service worker, and a JSON file for the application manifest.
 
