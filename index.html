@@ -6,9 +6,10 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>Numarul meu de telefon</title>
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="phone.png">
   </head>
   <body>
-    <h1>Numarul meu de telefon</h1>
+    <h1>My Number of Phone</h1>
     <p id="phoneNumber"></p>
   </body>
   <script>
@@ -18,28 +19,28 @@
       });
     }
 
-    // Functia care cere permisiunea utilizatorului
+    // The function that asks for the user's permission
     function getPhoneNumber() {
-      // Verifica daca exista permisiunea de a accesa numarul de telefon
+      // Check if there is permission to access the phone number
       if (navigator.permissions) {
         navigator.permissions.query({ name: 'telephony' }).then(function(permissionStatus) {
-          // Daca exista permisiunea, afiseaza numarul de telefon
+          // If there is permission, display the phone number
           if (permissionStatus.state === 'granted') {
             navigator.telephony.getSelfId().then(function(phoneNumber) {
               document.querySelector('#phoneNumber').textContent = phoneNumber;
             });
           } else {
-            // Daca nu exista permisiunea, afiseaza un mesaj
-            document.querySelector('#phoneNumber').textContent = 'Permisiunea de a accesa numarul de telefon nu a fost acordata.';
+            // If there is no permission, it displays a message
+            document.querySelector('#phoneNumber').textContent = '** Permission to access the phone number was not granted. **';
           }
         });
       } else {
-        // Daca browser-ul nu suporta permisiunile, afiseaza un mesaj
-        document.querySelector('#phoneNumber').textContent = 'Browser-ul tau nu suporta permisiunile necesare pentru a accesa numarul de telefon.';
+        // If the browser does not support the permissions, it displays a message
+        document.querySelector('#phoneNumber').textContent = '*** Your browser does not support the necessary permissions to access the phone number. ***';
       }
     }
 
-    // Incearca sa obtii permisiunea la incarcarea paginii
+    // Try to get permission to load the page
     window.addEventListener('load', getPhoneNumber);
   </script>
 </html>
