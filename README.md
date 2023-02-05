@@ -1,6 +1,7 @@
 # [PWA_getMyPhoneNumber](https://github.com/stefanache/PWA_getMyPhoneNumber)
 
 That application can be viewed in your phone using telephone's browser(like Chrome).
+
 If it can and if you according the permission then read your telehone's number and 
 show it as/in single page.
 
