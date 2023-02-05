@@ -1,0 +1,16 @@
+// manifest.json
+{
+  "name": "Aplicatia mea PWA",
+  "short_name": "Aplicatia mea",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#333",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
